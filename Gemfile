@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+#enable active-record session store
+gem 'activerecord-session_store'
 ruby '2.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
