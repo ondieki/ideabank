@@ -10,6 +10,9 @@ gem 'rails', '4.0.2'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.1'
 
+#converts Less to Sass, making Boostrap files available to App
+gem 'bootstrap-sass', '2.3.2.0'
+
 # Use Uglifier as compressor for JavaScript assets
 #gem 'uglifier', '>= 1.3.0'
 gem 'uglifier', '2.1.1'
