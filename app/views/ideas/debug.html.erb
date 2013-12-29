@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <meta charset="utf-8" />
+  <title>Social User Profile Page in HTML5/CSS3[DEMO]</title>
+  <link rel="stylesheet" type="text/css" href="global.css" />
+</head>
+
+<body>  
+  <header>
+    <div class="wrapper">
+      <a href="#"><img src="/img/Logo2.jpg" alt="mysquare logo" title="mysquare - checkin and go home!" /></a>
+      
+      <span id="usernav"><a href="/user/logout">Logout</a> - <a href="#">Settings</a> - <a href="#">My Profile<span><img src="img/user_avatar_s.jpg" /></span></a></span>
+    </div>
+  </header>
+  
+  <nav>
+    <ul id="n" class="clearfix">
+      <li class="sel"><a href="#">Homepage</a></li>
+      <li class="sel"><a href="#">Profile</a></li>
+      <li class="sel"><a href="/ideas">Ideas</a></li>
+      <li class="sel"><a href="#">Stars</a></li>
+      <li class="sel"><a href="#">Search</a></li>
+      <li class="sel"><a href="#">Find Friends</a></li>
+    </ul>
+  </nav>
+  
+<% if flash[:error] %>
+  <p class='error'><%=h flash[:error] %></p>
+<% end -%>
+<% if flash[:notice] -%>
+  <p class='notice'><%=h flash[:notice] %></p>
+<% end -%>
+
+
+ </body>
+</html>
+

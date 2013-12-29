@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   has_many :photos
-  has_many :courses
-  has_many :levels
+  has_many :ideas
+  has_many :stars
 
   attr_accessor :password, :password_confirmation
 

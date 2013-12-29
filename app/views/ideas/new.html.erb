@@ -26,25 +26,62 @@
     </ul>
   </nav>
   
-  <div id="content" class="clearfix">
     <section id="left">
-      <div id="list4">
-         <ul>
-            <li><a href="#"><strong>Toronto</strong>2004</a></li>
-            <li><a href="#"><strong>Beijing</strong>2008</a></li>
-            <li><a href="#"><strong>London</strong>2012</a></li>
-            <li><a href="#"><strong>Rio de Janeiro</strong>2016</a></li>
-         </ul>
-      </div>
+
+      <p> </p>
+        <% @title = "Invest Idea" %>
+        <h2><strong>New Idea</strong></h2>
+        <%= form_for(@idea, :url => {:action => :post_new}, :html => {:class => "pure-form"}) do |f| %>
+          <div class="control-group">
+            <label class="control-label" for="idea_summary">Summary</label>
+            <div class="controls">
+              <input class="pure-input-2-3" type="text" id="idea_summary" name = "idea[summary]"placeholder="What's the point?">
+              </div>
+          </div>
+          <div class="textarea">
+            <label class="control-label" for="idea_description">Description</label>
+            <div class="control-group">
+              <input type="text" id="idea_description" name = "idea[description]"placeholder="Describe Idea. e.g. Target Market? Market Share? Niche?">
+            </div>
+          </div>
+          
+          <div class="control-group">
+            <label class="control-label" for="idea_sector">Sector</label>
+            <div class="controls">
+              <input type="text" id="idea_sector" name = "idea[sector]"placeholder="Enter Sector">
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="idea_interest">Interest Level</label>
+            <div class="controls">
+              <input type="integer" id="idea_personal_interest" name = "idea[personal_interest]"placeholder="Value between 0 and 10">
+            </div>
+          </div>
+            
+          <div class="control-group">
+            <label class="control-label" for="market">Target Market </label>
+                <select id="market" class="pure-input-1-2">
+                    <option>United States</option>
+                    <option>United Kingdom</option>
+                    <option></option>
+                </select>
+          </div>
+
+          <div class="control-group">
+            <div class="controls">
+              <button type="submit" class="btn" value ="save">Submit Idea</button>
+            </div>
+          </div>
+          <input type="hidden" id="idea_user" name = "idea[user_id]" value = <%= session["user_id"]%>>
+        <% end %>
     </section>
     
     <section id="right">
-      <a href="/ideas/new" class="btn btn-large btn-primary">New Idea?</a>
-        <p> </p>
       <div class="gcontent">
         <div class="head"><h1>Stars(3)</h1></div>
         <div class="boxy">
           <p>Contribute to Earn ThinkStars!</p>
+          
           <div class="badgeCount">
             <a href="#"><img src="/img/foursquare-badge.png" /></a>
             <a href="#"><img src="/img/foursquare-badge.png" /></a>
