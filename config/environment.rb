@@ -13,11 +13,10 @@ Ideabank::Application.configure do
 	  :authentication       => :plain,
 	  :enable_starttls_auto => true  }
 end
-
-# Initialize the Rails application.
+ 
+ # Initialize the Rails application.
  Ideabank::Application.initialize!
 
-	
   #ActionMailer::Base.delivery_method = :sendmail
   #ActionMailer::Base.sendmail_settings = {
    #     :location       => '/usr/sbin/sendmail',
