@@ -4,8 +4,6 @@ source 'https://rubygems.org'
 gem 'activerecord-session_store'
 ruby '2.0.0'
 
-gem 'tlsmail'
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
